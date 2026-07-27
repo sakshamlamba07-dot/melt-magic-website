@@ -1,9 +1,7 @@
 import './style.css';
 
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,232 +10,232 @@ import Lenis from 'lenis';
 gsap.registerPlugin(ScrollTrigger);
 
 const SITE = {
-  name: 'Elysian Resin Atelier',
-  url: 'https://elysianresinatelier.com',
-  email: 'concierge@elysianresinatelier.com',
-  phone: '+1 212 555 0186',
-  instagram: 'https://www.instagram.com/elysianresinatelier/'
+  name: 'Melt Magic',
+  url: 'https://meltmagic.co',
+  email: 'hello@meltmagic.co',
+  phone: '+91 98765 43210',
+  instagram: 'https://www.instagram.com/meltmagic.co/'
 };
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const currency = new Intl.NumberFormat('en-US', {
+const currency = new Intl.NumberFormat('en-IN', {
   style: 'currency',
-  currency: 'USD',
+  currency: 'INR',
   maximumFractionDigits: 0
 });
 
 const products = [
   {
-    slug: 'aurora-tide-serving-board',
-    name: 'Aurora Tide Serving Board',
-    category: 'Serveware',
+    slug: 'floral-diya-candle',
+    name: 'Floral Diya Candle',
+    category: 'Diya Candles',
+    price: 450,
+    image: '/assets/product-floral-diya.svg',
+    alt: 'Floral Diya soy candle with a pressed sunflower set in a terracotta diya bowl',
+    tagline: 'Sunflower-topped soy wax, poured in a clay diya',
+    description:
+      'A hand-poured soy candle set in a traditional terracotta diya, finished with a real pressed sunflower and a warm sandalwood scent.',
+    dimensions: '9 \u00d7 9 \u00d7 4 cm',
+    finish: '100% soy wax, cotton wick, dried florals',
+    leadTime: 'Ships in 3\u20135 days',
+    colors: ['#e8a13c', '#c96f2e', '#fff3da']
+  },
+  {
+    slug: 'sunlit-garden-candle',
+    name: 'Sunlit Garden Candle',
+    category: 'Floral Candles',
+    price: 550,
+    image: '/assets/product-sunlit-garden.svg',
+    alt: 'Sunlit Garden soy candle topped with marigold petals in a wooden bowl',
+    tagline: 'Marigold and citrus soy candle in a rustic bowl',
+    description:
+      'A garden-inspired soy candle layered with dried marigold petals and a bright citrus-floral fragrance, hand-poured in small batches.',
+    dimensions: '10 \u00d7 10 \u00d7 5 cm',
+    finish: '100% soy wax, cotton wick, dried florals',
+    leadTime: 'Ships in 3\u20135 days',
+    colors: ['#e8b83c', '#d67d3a', '#fff6e3']
+  },
+  {
+    slug: 'melt-affair-latte-candle',
+    name: 'Melt Affair Latte Candle',
+    category: 'Dessert Candles',
+    price: 380,
+    image: '/assets/product-melt-affair-latte.svg',
+    alt: 'Melt Affair latte-inspired soy candle in a glass cup with layered cream wax',
+    tagline: 'Iced-latte soy candle from the Melt Affair collection',
+    description:
+      'Layered soy wax poured to look like a cold latte, finished with a whipped wax "foam" top and a warm vanilla-coffee scent.',
+    dimensions: '8 \u00d7 8 \u00d7 9 cm',
+    finish: '100% soy wax, cotton wick, glass vessel',
+    leadTime: 'Ships in 3\u20135 days',
+    colors: ['#c99361', '#8a5a34', '#fff3e2']
+  },
+  {
+    slug: 'berry-bloom-candle',
+    name: 'Berry Bloom Candle',
+    category: 'Dessert Candles',
     price: 420,
-    image: '/assets/product-aurora-tide.svg',
-    alt: 'Aurora Tide resin serving board with blue transparent resin and champagne metallic currents',
-    tagline: 'Translucent ocean resin with champagne leaf',
+    image: '/assets/product-berry-bloom.svg',
+    alt: 'Berry Bloom soy candle with dried berries and a strawberry fragrance',
+    tagline: 'Strawberry and wild berry scented soy candle',
     description:
-      'A hand-poured serving board with suspended champagne leaf, translucent tide lines, and a mirror-polished food-safe finish.',
-    dimensions: '46 × 21 × 3 cm',
-    finish: 'Food-safe gloss resin, hand-polished edges',
-    leadTime: 'Ships in 12 studio days',
-    colors: ['#8edfea', '#d6b06a', '#fff7e6']
+      'A sweet, fruity soy candle finished with dried berries on top \u2014 part of the Melt Affair dessert-inspired collection.',
+    dimensions: '8 \u00d7 8 \u00d7 6 cm',
+    finish: '100% soy wax, cotton wick, dried botanicals',
+    leadTime: 'Ships in 3\u20135 days',
+    colors: ['#d9536b', '#a83250', '#ffe9ec']
   },
   {
-    slug: 'obsidian-bloom-wall-panel',
-    name: 'Obsidian Bloom Wall Panel',
-    category: 'Wall Art',
-    price: 1280,
-    image: '/assets/product-obsidian-bloom.svg',
-    alt: 'Obsidian Bloom wall panel in smoked black resin with botanical metallic bloom details',
-    tagline: 'Smoked black resin with botanical gold bloom',
+    slug: 'matcha-garden-candle',
+    name: 'Matcha Garden Candle',
+    category: 'Dessert Candles',
+    price: 400,
+    image: '/assets/product-matcha-garden.svg',
+    alt: 'Matcha green soy candle with a soft green ombre finish',
+    tagline: 'Matcha-green soy candle, earthy and calming',
     description:
-      'A gallery-scale wall panel poured in translucent black resin with botanical veining, mineral bloom, and subtle gold leaf.',
-    dimensions: '70 × 52 × 4 cm',
-    finish: 'High-gloss face with satin black shadow frame',
-    leadTime: 'Ships in 4 studio weeks',
-    colors: ['#1a1517', '#c99c55', '#fff0d2']
+      'A soft green soy candle blended to smell like fresh matcha, with a gentle earthy warmth \u2014 perfect for a cozy corner.',
+    dimensions: '8 \u00d7 8 \u00d7 6 cm',
+    finish: '100% soy wax, cotton wick',
+    leadTime: 'Ships in 3\u20135 days',
+    colors: ['#8fae5c', '#5a7a38', '#f4f7e6']
   },
   {
-    slug: 'champagne-current-coasters',
-    name: 'Champagne Current Coasters',
-    category: 'Table Objects',
-    price: 240,
-    image: '/assets/product-champagne-current.svg',
-    alt: 'Champagne Current coaster set with translucent warm resin and gold current patterns',
-    tagline: 'Four sculptural coasters with luminous gold drift',
+    slug: 'wrapped-bouquet-candle-set',
+    name: 'Wrapped Bouquet Candle Set',
+    category: 'Gift Sets',
+    price: 1200,
+    image: '/assets/product-wrapped-bouquet.svg',
+    alt: 'Set of flower-shaped soy candles wrapped like a bouquet for gifting',
+    tagline: 'A bouquet of flower candles, wrapped and ready to gift',
     description:
-      'A collectible set of four resin coasters with poured champagne currents, polished bevels, and soft protective feet.',
-    dimensions: '10 × 10 × 1.4 cm each',
-    finish: 'Crystal gloss resin with cork-backed feet',
-    leadTime: 'Ships in 7 studio days',
-    colors: ['#d6bf8c', '#f1c86c', '#fff8e7']
-  },
-  {
-    slug: 'lumen-river-console',
-    name: 'Lumen River Console',
-    category: 'Furniture',
-    price: 6200,
-    image: '/assets/product-lumen-river.svg',
-    alt: 'Lumen River console table with luminous resin river and dark architectural base',
-    tagline: 'Architectural console with luminous resin river',
-    description:
-      'A made-to-order console table pairing sculptural hardwood edges with a deep translucent resin river and bronze detailing.',
-    dimensions: '150 × 38 × 82 cm',
-    finish: 'Hand-rubbed oil, resin polish, bronze base',
-    leadTime: 'Ships in 10 studio weeks',
-    colors: ['#8fd0c8', '#bd8f4a', '#fff6df']
-  },
-  {
-    slug: 'ivory-veil-jewelry-dish',
-    name: 'Ivory Veil Jewelry Dish',
-    category: 'Decor',
-    price: 310,
-    image: '/assets/product-ivory-veil.svg',
-    alt: 'Ivory Veil pearl resin jewelry dish with champagne edges',
-    tagline: 'Pearl resin with a soft champagne rim',
-    description:
-      'A sculptural jewelry dish with pearl resin depth, champagne edging, and a soft concave silhouette for daily ritual objects.',
-    dimensions: '18 × 15 × 3 cm',
-    finish: 'Pearl gloss resin with hand-gilded rim',
-    leadTime: 'Ships in 9 studio days',
-    colors: ['#f3e8cf', '#cda965', '#fffaf0']
-  },
-  {
-    slug: 'nocturne-marble-tray',
-    name: 'Nocturne Marble Tray',
-    category: 'Serveware',
-    price: 540,
-    image: '/assets/product-nocturne-marble.svg',
-    alt: 'Nocturne Marble smoked black resin tray with stone-like veining',
-    tagline: 'Smoked resin marble with polished black depth',
-    description:
-      'A luxury tray poured in smoked black resin, veined by hand, and finished with a deep lacquered sheen.',
-    dimensions: '42 × 28 × 3 cm',
-    finish: 'Gloss resin with velvet base protection',
-    leadTime: 'Ships in 14 studio days',
-    colors: ['#6c7280', '#c39a57', '#fff3da']
+      'Five flower-shaped soy candles in mixed shades, wrapped kraft-paper bouquet style \u2014 a ready-to-gift set for any occasion.',
+    dimensions: 'Bouquet of 5, 6 cm each',
+    finish: '100% soy wax, cotton wicks, gift wrap',
+    leadTime: 'Ships in 5\u20137 days',
+    colors: ['#e8863c', '#c94f4f', '#fff3da']
   }
 ];
 
 const materialOptions = [
   {
     key: 'aurora',
-    label: 'Aurora Blue',
-    color: '#8edfea',
+    label: 'Golden Amber',
+    color: '#e0a34a',
     accent: '#d6b06a',
-    description: 'Cool translucent resin with champagne mineral currents.'
+    description: 'Warm amber soy wax with a soft honey glow.'
   },
   {
     key: 'obsidian',
-    label: 'Obsidian Smoke',
-    color: '#161719',
+    label: 'Charcoal Ash',
+    color: '#3a342e',
     accent: '#c99c55',
-    description: 'Smoked black resin with high-contrast gilded depth.'
+    description: 'Deep charcoal soy wax with warm gold accents.'
   },
   {
     key: 'champagne',
-    label: 'Champagne Pearl',
+    label: 'Ivory Cream',
     color: '#ead7a7',
     accent: '#fff7e6',
-    description: 'Warm pearl resin with soft ivory refraction.'
+    description: 'Soft ivory soy wax with a smooth matte finish.'
   }
 ];
 
 const categories = [
   {
-    title: 'Serveware',
-    text: 'Boards, trays, and elevated tabletop objects created for intimate dining rituals and private hosting.'
+    title: 'Diya & Festival Candles',
+    text: 'Soy candles set in terracotta diyas and bowls, finished with real dried flowers \u2014 made for Diwali and festive gifting.'
   },
   {
-    title: 'Wall Art',
-    text: 'Large-format resin panels with luminous depth, mineral blooms, and gallery-grade hanging systems.'
+    title: 'Floral & Dessert Candles',
+    text: 'The Melt Affair collection \u2014 latte cups, berry blooms, and matcha greens, poured to look good enough to eat.'
   },
   {
-    title: 'Bespoke Interiors',
-    text: 'Console tables, installation pieces, and architectural resin commissions for collectors and designers.'
+    title: 'Gift Sets & Bulk Orders',
+    text: 'Wrapped bouquets, custom favors, and bulk batches for weddings, events, and corporate gifting.'
   }
 ];
 
 const craft = [
   {
-    title: 'Pigment Composition',
-    text: 'Every pour begins with a custom palette mixed by weight, temperature, and translucency to create depth without visual noise.'
+    title: 'Wax Blending',
+    text: 'Every batch starts with 100% soy wax, hand-blended with skin-safe fragrance oils at the right temperature for a clean, even burn.'
   },
   {
-    title: 'Controlled Pouring',
-    text: 'Resin is layered in precise windows of viscosity, allowing champagne leaf, mineral bloom, and bubbles to suspend naturally.'
+    title: 'Hand Pouring',
+    text: 'Wax is poured slowly into diyas, glass cups, and molds, with dried flowers and petals placed by hand while it sets.'
   },
   {
-    title: 'Museum Polish',
-    text: 'Each cured object is sanded through progressive grits, polished by hand, inspected under raking light, and sealed.'
+    title: 'Cure & Finish',
+    text: 'Each candle cures fully before the wick is trimmed, the vessel is cleaned, and it is wrapped ready for gifting.'
   }
 ];
 
 const processSteps = [
   {
-    title: 'Private Briefing',
-    text: 'We define dimensions, palette, finish, personalization, interior context, and installation requirements.'
+    title: 'Tell Us Your Vision',
+    text: 'Share the scent, colors, occasion, and quantity \u2014 festival gifting, wedding favors, or a bulk order for your event.'
   },
   {
-    title: 'Material Study',
-    text: 'The atelier prepares pigment swatches and resin samples so the final object feels intentional in your space.'
+    title: 'Sample & Approve',
+    text: 'We share a sample scent and finish so you know exactly what you are getting before the full batch is poured.'
   },
   {
-    title: 'Cinematic Pour',
-    text: 'Your piece is poured in controlled layers with temperature, humidity, and viscosity documented throughout.'
+    title: 'Small-Batch Pour',
+    text: 'Your order is hand-poured in small batches, with dried florals and finishes added while the wax is still soft.'
   },
   {
-    title: 'Cure & Reveal',
-    text: 'After a slow cure, the mold is released, edges are refined, and the resin is inspected for depth and clarity.'
+    title: 'Cure & Cool',
+    text: 'Every candle cures fully at room temperature so the scent throw and burn quality are exactly right.'
   },
   {
-    title: 'Final Polish',
-    text: 'The surface is hand-polished, signed, packed in archival wrapping, and prepared for insured delivery.'
+    title: 'Wrapped & Shipped',
+    text: 'Candles are wrapped, boxed securely, and shipped out \u2014 usually within 3\u20135 days for standard orders.'
   }
 ];
 
 const testimonials = [
   {
     quote:
-      'The Aurora board feels like a piece of ocean captured under glass. It is functional, but it reads as sculpture.',
-    author: 'Mara Ellison',
-    role: 'Private Collector, Tribeca'
+      'The Floral Diya candles were the highlight of our Diwali gifting this year. Every guest asked where we got them.',
+    author: 'Priya Mehta',
+    role: 'Customer, Ahmedabad'
   },
   {
     quote:
-      'Elysian translated our hotel palette into three wall panels with incredible restraint. They feel quiet, expensive, and alive.',
-    author: 'Theo Laurent',
-    role: 'Interior Director, Maison Ardent'
+      'Ordered the Wrapped Bouquet set for a friend\u2019s birthday and it looked better in person than in the photos. Smells incredible too.',
+    author: 'Rohan Shah',
+    role: 'Customer, Mumbai'
   },
   {
     quote:
-      'The process was precise from the first sample to installation. The resin has a depth that photography cannot fully capture.',
-    author: 'Anika Shah',
-    role: 'Residential Designer'
+      'We placed a bulk order for our wedding favors and Melt Magic delivered on time with every candle perfectly finished.',
+    author: 'Ananya Desai',
+    role: 'Bulk Order Customer'
   }
 ];
 
 const faqs = [
   {
-    question: 'Is each resin artwork one of a kind?',
+    question: 'What are your candles made of?',
     answer:
-      'Yes. Pigments, metallic inclusions, micro-bubbles, and flow lines move differently in every pour. We can control palette and composition, but each finished object remains singular.'
+      'Every candle is made with 100% soy wax and cotton wicks, scented with skin-safe fragrance oils. No paraffin, no lead wicks \u2014 just clean-burning, eco-friendly wax.'
   },
   {
-    question: 'Are the serving pieces food-safe?',
+    question: 'Do you take bulk or custom orders?',
     answer:
-      'Serveware pieces use a food-safe finishing system after full cure. They are intended for dry or room-temperature presentation and should be hand-washed with a soft cloth.'
+      'Yes. DM us on Instagram with your occasion, quantity, and preferred scents \u2014 we regularly do bulk orders for weddings, festivals, and corporate gifting.'
   },
   {
-    question: 'Do you accept custom colors and dimensions?',
+    question: 'How long does a candle burn for?',
     answer:
-      'Yes. Bespoke commissions can be matched to interior palettes, stone samples, event styling, hospitality projects, and personal monograms.'
+      'Burn time depends on size, but most of our candles give 15\u201325 hours of burn time. Trim the wick to about 5mm before each burn for the cleanest results.'
   },
   {
-    question: 'How are large pieces shipped?',
+    question: 'How do I place an order?',
     answer:
-      'Large wall panels and furniture commissions are packed in custom crates with edge protection, insured freight, and installation guidance.'
+      'Right now, ordering is handled through Instagram DM \u2014 tap the Instagram button anywhere on this site to message us directly and place your order.'
   }
 ];
 
@@ -264,10 +262,10 @@ function navTemplate() {
     <header class="nav-wrap" id="site-nav">
       <div class="nav-inner">
         <a href="/" class="brand magnetic" aria-label="${SITE.name} home">
-          <span class="brand-mark">ER</span>
+          <span class="brand-mark">MM</span>
           <span class="brand-copy">
-            <span class="brand-name">Elysian Resin</span>
-            <span class="brand-sub">Atelier Objects</span>
+            <span class="brand-name">Melt Magic</span>
+            <span class="brand-sub">Soy Candles</span>
           </span>
         </a>
 
@@ -277,11 +275,11 @@ function navTemplate() {
           <a class="nav-link" href="/#gallery">Gallery</a>
           <a class="nav-link" href="/#custom">Custom</a>
           <a class="nav-link" href="/#contact">Contact</a>
-          <a class="nav-bag" href="/product/aurora-tide-serving-board" aria-label="Reserved artworks">
+          <a class="nav-bag" href="/product/floral-diya-candle" aria-label="Reserved candles">
             <span>Reservations</span>
             <span class="bag-count" id="bag-count">0</span>
           </a>
-          <a class="btn nav-cta magnetic" href="/product/aurora-tide-serving-board">Design yours</a>
+          <a class="btn nav-cta magnetic" href="/product/floral-diya-candle">Shop candles</a>
         </nav>
 
         <button class="nav-toggle magnetic" id="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">
@@ -330,11 +328,11 @@ function homeTemplate() {
             <div class="hero-shade" aria-hidden="true"></div>
 
             <div class="hero-copy">
-              <p class="eyebrow reveal">Handcrafted Luxury Resin</p>
-              <h1 class="display reveal" id="hero-title">Liquid light, poured by hand.</h1>
+              <p class="eyebrow reveal">Handcrafted Soy Candles</p>
+              <h1 class="display reveal" id="hero-title">Melted slow, poured by hand.</h1>
               <p class="lead reveal">
-                Museum-quality resin objects created for collectors, designers, and private interiors — shaped through slow pours,
-                champagne metals, suspended pigment, and hand-polished clarity.
+                Small-batch soy candles made for cozy interiors and thoughtful gifting — hand-poured with real dried florals,
+                clean fragrance oils, and an eco-friendly finish.
               </p>
 
               <div class="btn-row reveal">
@@ -344,16 +342,16 @@ function homeTemplate() {
 
               <div class="hero-metrics reveal">
                 <div class="metric">
-                  <strong data-count="240">0</strong>
-                  <span>Private pieces</span>
+                  <strong data-count="500">0</strong>
+                  <span>Candles poured</span>
                 </div>
                 <div class="metric">
-                  <strong data-count="18">0</strong>
-                  <span>Layer checks</span>
+                  <strong data-count="12">0</strong>
+                  <span>Signature scents</span>
                 </div>
                 <div class="metric">
-                  <strong data-count="96">0</strong>
-                  <span>Hour cure cycle</span>
+                  <strong data-count="24">0</strong>
+                  <span>Hour cure time</span>
                 </div>
               </div>
             </div>
@@ -385,24 +383,24 @@ function homeTemplate() {
         <div class="section-container editorial-grid">
           <div class="editorial-copy">
             <p class="section-kicker reveal">About The Brand</p>
-            <h2 class="reveal">A quiet atelier for luminous resin work.</h2>
+            <h2 class="reveal">A cozy little studio for handcrafted candles.</h2>
             <p class="lead reveal">
-              Elysian Resin Atelier creates collectible resin objects for interiors that value tactility, silence, and cinematic material presence.
-              The studio treats resin as a luxury medium: transparent, volatile, precise, and deeply expressive.
+              Melt Magic makes small-batch soy candles for people who love slow, cozy moments at home.
+              Every candle is hand-poured, finished with real dried florals, and made with eco-friendly, sustainable scents.
             </p>
 
             <div class="stat-list reveal">
-              <div><strong>12</strong><span>Controlled finishing stages before a piece leaves the studio.</span></div>
-              <div><strong>4</strong><span>Palette studies prepared for most bespoke commissions.</span></div>
-              <div><strong>1</strong><span>Signed artwork certificate archived for every collector.</span></div>
+              <div><strong>12</strong><span>Signature scents blended in-studio.</span></div>
+              <div><strong>60+</strong><span>Candle designs poured and shared so far.</span></div>
+              <div><strong>1</strong><span>Small batch at a time — never mass produced.</span></div>
             </div>
           </div>
 
           <figure class="editorial-panel reveal image-reveal">
-            <img src="/assets/gallery-3.svg" alt="Studio light over a polished handcrafted resin artwork" loading="lazy" decoding="async" />
+            <img src="/assets/gallery-3.svg" alt="Studio light over a freshly poured handcrafted soy candle" loading="lazy" decoding="async" />
             <figcaption class="signature-card">
-              <strong>Signed by the pour.</strong>
-              <span>No two currents, inclusions, or suspended bubbles resolve the same way.</span>
+              <strong>Poured with care.</strong>
+              <span>Every candle is finished by hand, so no two are ever quite the same.</span>
             </figcaption>
           </figure>
         </div>
@@ -475,11 +473,11 @@ function homeTemplate() {
 
           <div class="gallery-grid">
             ${Array.from({ length: 6 }, (_, index) => {
-              const labels = ['Pigment', 'Gilding', 'Light Test', 'Edge Work', 'Pearl Inlay', 'Final Polish'];
+              const labels = ['Wax Melt', 'Fragrance Mix', 'Hand Pour', 'Floral Set', 'Cure & Cool', 'Final Wrap'];
               return `
                 <figure class="gallery-item image-reveal reveal">
-                  <img src="/assets/gallery-${index + 1}.svg" alt="${labels[index]} stage of handcrafted resin artwork" loading="lazy" decoding="async" />
-                  <figcaption class="gallery-caption"><span>${labels[index]}</span><span>Atelier 0${index + 1}</span></figcaption>
+                  <img src="/assets/gallery-${index + 1}.svg" alt="${labels[index]} stage of handcrafted soy candle making" loading="lazy" decoding="async" />
+                  <figcaption class="gallery-caption"><span>${labels[index]}</span><span>Studio 0${index + 1}</span></figcaption>
                 </figure>
               `;
             }).join('')}
@@ -491,22 +489,22 @@ function homeTemplate() {
         <div class="section-container">
           <div class="custom-panel reveal">
             <div>
-              <p class="section-kicker">Custom Orders</p>
-              <h2>Commission a piece with private material language.</h2>
+              <p class="section-kicker">Custom &amp; Bulk Orders</p>
+              <h2>Get a batch made just for your event.</h2>
               <p class="lead">
-                Bespoke projects are designed around palette, scale, room tone, lighting, and ritual use. We create resin objects that feel born for the space.
+                Weddings, festivals, corporate gifting, or your own celebration — we design scent, color, and vessel around your occasion.
               </p>
               <div class="btn-row">
-                <a class="btn magnetic" href="/#contact">Begin commission <span class="icon-arrow">→</span></a>
-                <a class="btn btn--ghost magnetic" href="/product/aurora-tide-serving-board">Open 3D viewer</a>
+                <a class="btn magnetic" href="/#contact">Start your order <span class="icon-arrow">→</span></a>
+                <a class="btn btn--ghost magnetic" href="/product/floral-diya-candle">View a candle</a>
               </div>
             </div>
 
             <ul class="custom-list" aria-label="Custom order options">
-              <li>Interior palette matching</li>
-              <li>Monograms and date inscriptions</li>
-              <li>Architectural sizing</li>
-              <li>Collector certificate and archive record</li>
+              <li>Custom scent blending</li>
+              <li>Personalized labels and tags</li>
+              <li>Bulk quantity discounts</li>
+              <li>Same-week festival delivery</li>
             </ul>
           </div>
         </div>
@@ -605,13 +603,13 @@ function homeTemplate() {
               <p class="section-kicker reveal">Instagram Feed</p>
               <h2 class="reveal">Fresh pours from the atelier.</h2>
             </div>
-            <a class="btn btn--ghost magnetic reveal" href="${SITE.instagram}" target="_blank" rel="noreferrer">Follow @elysianresinatelier</a>
+            <a class="btn btn--ghost magnetic reveal" href="${SITE.instagram}" target="_blank" rel="noreferrer">Follow @meltmagic.co</a>
           </div>
 
           <div class="instagram-grid">
             ${Array.from({ length: 6 }, (_, index) => `
-              <a class="instagram-tile reveal image-reveal" href="${SITE.instagram}" target="_blank" rel="noreferrer" aria-label="Open Elysian Resin Atelier Instagram post ${index + 1}">
-                <img src="/assets/instagram-${index + 1}.svg" alt="Instagram studio image ${index + 1} from Elysian Resin Atelier" loading="lazy" decoding="async" />
+              <a class="instagram-tile reveal image-reveal" href="${SITE.instagram}" target="_blank" rel="noreferrer" aria-label="Open Melt Magic Instagram post ${index + 1}">
+                <img src="/assets/instagram-${index + 1}.svg" alt="Instagram studio image ${index + 1} from Melt Magic" loading="lazy" decoding="async" />
                 <span>Studio 0${index + 1}</span>
               </a>
             `).join('')}
@@ -784,8 +782,8 @@ function footerTemplate() {
     <footer class="footer">
       <div class="footer-grid">
         <div>
-          <p class="section-kicker">Elysian Resin Atelier</p>
-          <h2>Hand-poured objects for luminous interiors.</h2>
+          <p class="section-kicker">Melt Magic</p>
+          <h2>Hand-poured candles for cozy interiors.</h2>
         </div>
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="/#collection">Collection</a>
@@ -796,8 +794,8 @@ function footerTemplate() {
         </nav>
       </div>
       <div class="footer-bottom">
-        <span>© ${new Date().getFullYear()} ${SITE.name}. All resin artworks handcrafted in small studio runs.</span>
-        <span>Luxury resin objects · Bespoke commissions · Collectible interiors</span>
+        <span>© ${new Date().getFullYear()} ${SITE.name}. All candles handcrafted in small studio batches.</span>
+        <span>Handcrafted soy candles · Custom orders · Festive gifting</span>
       </div>
     </footer>
   `;
@@ -832,13 +830,13 @@ function setMeta(route) {
   const product = route.product;
   const title =
     route.type === 'product'
-      ? `${product.name} — Luxury Resin Product Viewer | ${SITE.name}`
-      : `${SITE.name} — Luxury Handcrafted Resin Art`;
+      ? `${product.name} — Candle Details | ${SITE.name}`
+      : `${SITE.name} — Handcrafted Soy Candles`;
 
   const description =
     route.type === 'product'
       ? `${product.name}: ${product.description} Explore material colors, personalization, 360° rotation, and bespoke order options.`
-      : 'Elysian Resin Atelier creates museum-quality handcrafted resin serveware, wall art, trays, and bespoke sculptural commissions.';
+      : 'Melt Magic creates handcrafted soy candles — diya candles, floral candles, dessert-inspired candles, and gift sets, made in small batches in Ahmedabad.';
 
   document.title = title;
   setMetaTag('description', description);
@@ -1309,7 +1307,7 @@ function initReservation(product) {
       price: product.price,
       reservedAt: new Date().toISOString()
     });
-    localStorage.setItem('elysian-reservations', JSON.stringify(reservations));
+    localStorage.setItem('meltmagic-reservations', JSON.stringify(reservations));
     updateReservationCount();
     showToast(`${product.name} has been added to your private reservations.`);
   });
@@ -1317,7 +1315,7 @@ function initReservation(product) {
 
 function readReservations() {
   try {
-    return JSON.parse(localStorage.getItem('elysian-reservations') || '[]');
+    return JSON.parse(localStorage.getItem('meltmagic-reservations') || '[]');
   } catch {
     return [];
   }
@@ -1381,7 +1379,7 @@ function initProductViewer(product) {
   scene.fog = new THREE.FogExp2(0x080706, 0.04);
 
   const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 80);
-  camera.position.set(3.3, 2.1, 4.2);
+  camera.position.set(2.1, 1.5, 2.7);
 
   const renderer = new THREE.WebGLRenderer({
     canvas,
@@ -1402,16 +1400,16 @@ function initProductViewer(product) {
   controls.dampingFactor = 0.08;
   controls.autoRotate = !prefersReducedMotion;
   controls.autoRotateSpeed = 0.6;
-  controls.minDistance = 2.25;
-  controls.maxDistance = 6.2;
-  controls.target.set(0, 0.1, 0);
+  controls.minDistance = 1.6;
+  controls.maxDistance = 4.4;
+  controls.target.set(0, 0.45, 0);
 
   const productRoot = new THREE.Group();
   productRoot.rotation.y = -0.2;
   scene.add(productRoot);
 
   const plinth = new THREE.Mesh(
-    new THREE.CylinderGeometry(1.75, 1.9, 0.08, 96),
+    new THREE.CylinderGeometry(1.15, 1.25, 0.08, 96),
     new THREE.MeshPhysicalMaterial({
       color: 0x0a0908,
       roughness: 0.22,
@@ -1441,43 +1439,11 @@ function initProductViewer(product) {
   const label = createPersonalizationLabel();
   productRoot.add(label.mesh);
 
-  new GLTFLoader().load(
-    '/models/aurora-serving-board.glb',
-    (gltf) => {
-      if (disposed) return;
-
-      const model = gltf.scene;
-      model.traverse((child) => {
-        if (child.isMesh) {
-          child.castShadow = true;
-          child.receiveShadow = true;
-          child.material = resinMaterial;
-          modelMeshes.push(child);
-        }
-      });
-
-      const box = new THREE.Box3().setFromObject(model);
-      const size = new THREE.Vector3();
-      const center = new THREE.Vector3();
-      box.getSize(size);
-      box.getCenter(center);
-
-      model.position.sub(center);
-      model.scale.setScalar(2.55 / Math.max(size.x, size.z));
-      productRoot.add(model);
-      addInclusions(productRoot);
-    },
-    undefined,
-    () => {
-      if (disposed) return;
-      const fallback = createFallbackProduct(resinMaterial);
-      productRoot.add(fallback);
-      fallback.traverse((child) => {
-        if (child.isMesh) modelMeshes.push(child);
-      });
-      addInclusions(productRoot);
-    }
-  );
+  const fallback = createFallbackProduct(resinMaterial);
+  productRoot.add(fallback);
+  fallback.traverse((child) => {
+    if (child.isMesh && child.userData.swappable) modelMeshes.push(child);
+  });
 
   const resize = () => {
     const rect = stage.getBoundingClientRect();
@@ -1527,9 +1493,9 @@ function initProductViewer(product) {
 
       if (action === 'reset') {
         gsap.to(camera.position, {
-          x: 3.3,
-          y: 2.1,
-          z: 4.2,
+          x: 2.1,
+          y: 1.5,
+          z: 2.7,
           duration: 0.8,
           ease: 'power3.out',
           onUpdate: () => controls.update()
@@ -1575,21 +1541,19 @@ function initProductViewer(product) {
 function makeViewerMaterial(key, color) {
   const option = materialOptions.find((item) => item.key === key) || materialOptions[0];
   const selected = new THREE.Color(color || option.color);
-  const accent = new THREE.Color(option.accent);
 
   return new THREE.MeshPhysicalMaterial({
     color: selected,
-    roughness: key === 'obsidian' ? 0.06 : 0.035,
+    roughness: key === 'obsidian' ? 0.55 : 0.42,
     metalness: 0,
-    transmission: key === 'obsidian' ? 0.38 : 0.72,
-    thickness: 0.75,
-    transparent: true,
-    opacity: key === 'obsidian' ? 0.88 : 0.78,
-    ior: 1.48,
-    clearcoat: 1,
-    clearcoatRoughness: 0.025,
-    attenuationColor: accent,
-    attenuationDistance: key === 'obsidian' ? 1.4 : 2.4
+    transmission: 0,
+    transparent: false,
+    ior: 1.3,
+    clearcoat: key === 'obsidian' ? 0.25 : 0.12,
+    clearcoatRoughness: 0.4,
+    sheen: 0.4,
+    sheenColor: new THREE.Color(option.accent),
+    sheenRoughness: 0.7
   });
 }
 
@@ -1608,9 +1572,8 @@ function createPersonalizationLabel() {
     opacity: 0.92
   });
 
-  const mesh = new THREE.Mesh(new THREE.PlaneGeometry(1.2, 0.3), material);
-  mesh.position.set(0, 0.18, 0.16);
-  mesh.rotation.x = -Math.PI / 2;
+  const mesh = new THREE.Mesh(new THREE.PlaneGeometry(0.7, 0.18), material);
+  mesh.position.set(0, 0.42, 1.02);
 
   function update(text) {
     const ctx = canvas.getContext('2d');
@@ -1691,24 +1654,73 @@ function addInclusions(root) {
 function createFallbackProduct(material) {
   const group = new THREE.Group();
 
-  const board = new THREE.Mesh(new RoundedBoxGeometry(2.55, 0.16, 1.22, 18, 0.18), material);
-  board.castShadow = true;
-  board.receiveShadow = true;
-  group.add(board);
-
-  const vein = new THREE.Mesh(
-    new THREE.PlaneGeometry(1.8, 0.08),
-    new THREE.MeshBasicMaterial({
-      color: 0xd6ad66,
+  const jar = new THREE.Mesh(
+    new THREE.CylinderGeometry(0.92, 0.98, 1.05, 64, 1, true),
+    new THREE.MeshPhysicalMaterial({
+      color: 0xd8cdb8,
+      roughness: 0.08,
+      metalness: 0,
+      transmission: 0.92,
+      thickness: 0.4,
       transparent: true,
-      opacity: 0.42,
+      opacity: 0.32,
+      ior: 1.45,
+      clearcoat: 1,
+      clearcoatRoughness: 0.05,
       side: THREE.DoubleSide
     })
   );
-  vein.rotation.x = -Math.PI / 2;
-  vein.rotation.z = -0.18;
-  vein.position.y = 0.095;
-  group.add(vein);
+  jar.position.y = 0.52;
+  jar.castShadow = false;
+  jar.receiveShadow = true;
+  group.add(jar);
+
+  const jarBase = new THREE.Mesh(
+    new THREE.CylinderGeometry(0.98, 0.98, 0.05, 64),
+    new THREE.MeshPhysicalMaterial({
+      color: 0xd8cdb8,
+      roughness: 0.1,
+      transmission: 0.85,
+      transparent: true,
+      opacity: 0.4,
+      ior: 1.45
+    })
+  );
+  jarBase.position.y = 0.02;
+  group.add(jarBase);
+
+  const wax = new THREE.Mesh(new THREE.CylinderGeometry(0.86, 0.88, 0.86, 64), material);
+  wax.userData.swappable = true;
+  wax.position.y = 0.46;
+  wax.castShadow = true;
+  wax.receiveShadow = true;
+  group.add(wax);
+
+  const waxTop = new THREE.Mesh(new THREE.CylinderGeometry(0.86, 0.86, 0.03, 64), material);
+  waxTop.userData.swappable = true;
+  waxTop.position.y = 0.9;
+  waxTop.castShadow = true;
+  group.add(waxTop);
+
+  const wick = new THREE.Mesh(
+    new THREE.CylinderGeometry(0.014, 0.018, 0.16, 12),
+    new THREE.MeshStandardMaterial({ color: 0x2a2018, roughness: 0.9 })
+  );
+  wick.position.y = 1.0;
+  wick.castShadow = true;
+  group.add(wick);
+
+  const flame = new THREE.Mesh(
+    new THREE.SphereGeometry(0.045, 16, 16),
+    new THREE.MeshBasicMaterial({ color: 0xffb85c })
+  );
+  flame.scale.set(1, 1.6, 1);
+  flame.position.y = 1.1;
+  group.add(flame);
+
+  const flameLight = new THREE.PointLight(0xffb35a, 1.4, 2.2);
+  flameLight.position.y = 1.1;
+  group.add(flameLight);
 
   return group;
 }
@@ -1741,3 +1753,4 @@ initLenis();
 initCursor();
 initRouter();
 render();
+
