@@ -1,0 +1,25 @@
+{
+  "name": "elysian-resin-atelier",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A cinematic luxury resin atelier website built with Vite, Three.js, GSAP, Lenis, procedural GLB assets, and HDRI studio lighting.",
+  "scripts": {
+    "postinstall": "node scripts/generate-assets.mjs",
+    "assets": "node scripts/generate-assets.mjs",
+    "dev": "vite --host 0.0.0.0",
+    "build": "npm run assets && vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.20",
+    "three": "^0.167.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.14"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

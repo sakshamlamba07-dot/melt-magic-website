@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Elysian Resin Atelier</title>
+  <desc id="desc">handcrafted luminous resin objects</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#070606"/>
+      <stop offset="0.42" stop-color="#17100d"/>
+      <stop offset="1" stop-color="#070606"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="58%">
+      <stop offset="0" stop-color="#88dce6" stop-opacity="0.88"/>
+      <stop offset="0.42" stop-color="#88dce6" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#070606" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.09"/>
+      </feComponentTransfer>
+      <feBlend mode="soft-light" in2="SourceGraphic"/>
+    </filter>
+    <filter id="blurred">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#glow)" opacity="0.9"/>
+  <ellipse cx="896.0" cy="576.0" rx="544.0" ry="264.0" fill="#88dce6" opacity="0.18" filter="url(#blurred)"/>
+  <path d="M -120 252.9 C 469.6 92.9, 882.4 442.9, 1307.5 252.9 S 1780.0 132.9, 1860.0 252.9" fill="none" stroke="#d2a45f" stroke-width="22.6" stroke-linecap="round" opacity="0.21"/>
+<path d="M -120 346.9 C 376.1 186.9, 831.2 536.9, 1293.5 346.9 S 1780.0 226.9, 1860.0 346.9" fill="none" stroke="#88dce6" stroke-width="13.9" stroke-linecap="round" opacity="0.43"/>
+<path d="M -120 449.5 C 398.9 289.5, 984.1 639.5, 1347.0 449.5 S 1780.0 329.5, 1860.0 449.5" fill="none" stroke="#fff6e3" stroke-width="26.1" stroke-linecap="round" opacity="0.30"/>
+<path d="M -120 540.7 C 340.1 380.7, 797.1 730.7, 1405.0 540.7 S 1780.0 420.7, 1860.0 540.7" fill="none" stroke="#d2a45f" stroke-width="13.1" stroke-linecap="round" opacity="0.24"/>
+<path d="M -120 685.3 C 272.1 525.3, 1055.5 875.3, 1354.4 685.3 S 1780.0 565.3, 1860.0 685.3" fill="none" stroke="#88dce6" stroke-width="17.6" stroke-linecap="round" opacity="0.38"/>
+<path d="M -120 787.8 C 391.0 627.8, 1031.7 977.8, 1310.8 787.8 S 1780.0 667.8, 1860.0 787.8" fill="none" stroke="#fff6e3" stroke-width="20.7" stroke-linecap="round" opacity="0.41"/>
+<path d="M -120 884.8 C 400.9 724.8, 849.3 1074.8, 1286.8 884.8 S 1780.0 764.8, 1860.0 884.8" fill="none" stroke="#d2a45f" stroke-width="15.5" stroke-linecap="round" opacity="0.38"/>
+<path d="M -120 1009.5 C 384.1 849.5, 820.4 1199.5, 1302.8 1009.5 S 1780.0 889.5, 1860.0 1009.5" fill="none" stroke="#88dce6" stroke-width="34.0" stroke-linecap="round" opacity="0.40"/>
+  <circle cx="1244.3" cy="524.0" r="12.6" fill="#d2a45f" opacity="0.31"/>
+<circle cx="955.3" cy="335.4" r="5.2" fill="#fff6e3" opacity="0.60"/>
+<circle cx="309.8" cy="1133.3" r="2.2" fill="#d2a45f" opacity="0.52"/>
+<circle cx="206.0" cy="602.3" r="11.9" fill="#fff6e3" opacity="0.49"/>
+<circle cx="1031.5" cy="11.5" r="4.6" fill="#d2a45f" opacity="0.19"/>
+<circle cx="289.7" cy="620.6" r="3.8" fill="#fff6e3" opacity="0.43"/>
+<circle cx="819.3" cy="1050.7" r="2.8" fill="#d2a45f" opacity="0.18"/>
+<circle cx="1016.3" cy="928.1" r="2.9" fill="#fff6e3" opacity="0.27"/>
+<circle cx="598.3" cy="854.6" r="10.8" fill="#d2a45f" opacity="0.36"/>
+<circle cx="23.6" cy="446.2" r="8.7" fill="#fff6e3" opacity="0.35"/>
+<circle cx="1518.1" cy="1113.2" r="11.0" fill="#d2a45f" opacity="0.39"/>
+<circle cx="1522.3" cy="208.2" r="3.1" fill="#fff6e3" opacity="0.42"/>
+<circle cx="1076.5" cy="55.1" r="8.4" fill="#d2a45f" opacity="0.31"/>
+<circle cx="391.5" cy="517.3" r="4.7" fill="#fff6e3" opacity="0.39"/>
+<circle cx="683.0" cy="244.3" r="6.2" fill="#d2a45f" opacity="0.40"/>
+<circle cx="1276.6" cy="1019.9" r="11.7" fill="#fff6e3" opacity="0.20"/>
+<circle cx="1308.5" cy="1165.7" r="8.7" fill="#d2a45f" opacity="0.26"/>
+<circle cx="251.7" cy="417.5" r="6.4" fill="#fff6e3" opacity="0.22"/>
+<circle cx="869.6" cy="1090.5" r="6.1" fill="#d2a45f" opacity="0.51"/>
+<circle cx="268.3" cy="810.9" r="9.1" fill="#fff6e3" opacity="0.22"/>
+<circle cx="117.5" cy="1144.1" r="9.7" fill="#d2a45f" opacity="0.35"/>
+<circle cx="1319.5" cy="1003.0" r="8.1" fill="#fff6e3" opacity="0.31"/>
+<circle cx="200.4" cy="1154.4" r="12.5" fill="#d2a45f" opacity="0.18"/>
+<circle cx="415.3" cy="563.1" r="9.8" fill="#fff6e3" opacity="0.53"/>
+<circle cx="1257.4" cy="406.9" r="2.8" fill="#d2a45f" opacity="0.54"/>
+<circle cx="1039.5" cy="135.8" r="7.7" fill="#fff6e3" opacity="0.35"/>
+<circle cx="213.2" cy="1138.7" r="12.3" fill="#d2a45f" opacity="0.33"/>
+<circle cx="816.5" cy="913.4" r="5.7" fill="#fff6e3" opacity="0.13"/>
+<circle cx="1297.3" cy="162.2" r="5.4" fill="#d2a45f" opacity="0.55"/>
+<circle cx="804.5" cy="321.7" r="4.9" fill="#fff6e3" opacity="0.50"/>
+<circle cx="562.5" cy="325.5" r="4.6" fill="#d2a45f" opacity="0.30"/>
+<circle cx="392.7" cy="754.7" r="8.7" fill="#fff6e3" opacity="0.36"/>
+<circle cx="347.2" cy="152.6" r="3.4" fill="#d2a45f" opacity="0.47"/>
+<circle cx="1164.6" cy="1174.7" r="4.9" fill="#fff6e3" opacity="0.59"/>
+  <rect x="96" y="84.00000000000001" width="1408" height="1032" rx="86" stroke="#d2a45f" stroke-opacity="0.28" stroke-width="2"/>
+  <rect width="1600" height="1200" fill="#fff" opacity="0.03" filter="url(#softNoise)"/>
+  <g opacity="0.92">
+    <text x="128" y="983.9999999999999" fill="#fff6e3" font-family="Cormorant Garamond, Georgia, serif" font-size="82" font-weight="600" letter-spacing="-1">Elysian Resin Atelier</text>
+    <text x="128" y="1050" fill="#d2a45f" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="600" letter-spacing="4">HANDCRAFTED LUMINOUS RESIN OBJECTS</text>
+  </g>
+</svg>

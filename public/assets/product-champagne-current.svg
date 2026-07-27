@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Champagne Current</title>
+  <desc id="desc">gilded translucent coaster set</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#080706"/>
+      <stop offset="0.42" stop-color="#2a2118"/>
+      <stop offset="1" stop-color="#080706"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="58%">
+      <stop offset="0" stop-color="#d6bf8c" stop-opacity="0.88"/>
+      <stop offset="0.42" stop-color="#d6bf8c" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#080706" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.09"/>
+      </feComponentTransfer>
+      <feBlend mode="soft-light" in2="SourceGraphic"/>
+    </filter>
+    <filter id="blurred">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#glow)" opacity="0.9"/>
+  <ellipse cx="896.0" cy="576.0" rx="544.0" ry="264.0" fill="#d6bf8c" opacity="0.18" filter="url(#blurred)"/>
+  <path d="M -120 240.2 C 485.0 80.2, 946.6 430.2, 1250.6 240.2 S 1780.0 120.2, 1860.0 240.2" fill="none" stroke="#f1c86c" stroke-width="25.2" stroke-linecap="round" opacity="0.39"/>
+<path d="M -120 335.7 C 442.5 175.7, 995.5 525.7, 1402.0 335.7 S 1780.0 215.7, 1860.0 335.7" fill="none" stroke="#d6bf8c" stroke-width="21.0" stroke-linecap="round" opacity="0.39"/>
+<path d="M -120 442.0 C 508.0 282.0, 1014.4 632.0, 1348.5 442.0 S 1780.0 322.0, 1860.0 442.0" fill="none" stroke="#fff8e7" stroke-width="29.4" stroke-linecap="round" opacity="0.20"/>
+<path d="M -120 543.5 C 351.1 383.5, 1009.4 733.5, 1284.9 543.5 S 1780.0 423.5, 1860.0 543.5" fill="none" stroke="#f1c86c" stroke-width="34.8" stroke-linecap="round" opacity="0.32"/>
+<path d="M -120 672.5 C 451.0 512.5, 1007.7 862.5, 1355.6 672.5 S 1780.0 552.5, 1860.0 672.5" fill="none" stroke="#d6bf8c" stroke-width="24.3" stroke-linecap="round" opacity="0.35"/>
+<path d="M -120 794.6 C 473.2 634.6, 870.8 984.6, 1391.6 794.6 S 1780.0 674.6, 1860.0 794.6" fill="none" stroke="#fff8e7" stroke-width="38.8" stroke-linecap="round" opacity="0.31"/>
+<path d="M -120 889.1 C 309.3 729.1, 885.6 1079.1, 1285.4 889.1 S 1780.0 769.1, 1860.0 889.1" fill="none" stroke="#f1c86c" stroke-width="27.6" stroke-linecap="round" opacity="0.40"/>
+<path d="M -120 978.8 C 534.8 818.8, 1023.7 1168.8, 1393.8 978.8 S 1780.0 858.8, 1860.0 978.8" fill="none" stroke="#d6bf8c" stroke-width="30.7" stroke-linecap="round" opacity="0.41"/>
+  <circle cx="619.0" cy="341.0" r="2.9" fill="#f1c86c" opacity="0.30"/>
+<circle cx="114.3" cy="762.2" r="7.5" fill="#fff8e7" opacity="0.25"/>
+<circle cx="675.3" cy="944.6" r="10.2" fill="#f1c86c" opacity="0.54"/>
+<circle cx="1200.1" cy="932.5" r="11.1" fill="#fff8e7" opacity="0.60"/>
+<circle cx="94.2" cy="673.1" r="10.1" fill="#f1c86c" opacity="0.59"/>
+<circle cx="1406.3" cy="94.7" r="2.5" fill="#fff8e7" opacity="0.13"/>
+<circle cx="1264.9" cy="1011.3" r="9.6" fill="#f1c86c" opacity="0.48"/>
+<circle cx="580.3" cy="1149.7" r="11.2" fill="#fff8e7" opacity="0.60"/>
+<circle cx="337.9" cy="572.4" r="2.7" fill="#f1c86c" opacity="0.37"/>
+<circle cx="753.8" cy="1009.4" r="6.2" fill="#fff8e7" opacity="0.36"/>
+<circle cx="1388.1" cy="19.3" r="6.6" fill="#f1c86c" opacity="0.36"/>
+<circle cx="75.1" cy="709.5" r="10.4" fill="#fff8e7" opacity="0.58"/>
+<circle cx="1525.6" cy="309.5" r="4.8" fill="#f1c86c" opacity="0.53"/>
+<circle cx="1339.7" cy="251.6" r="12.5" fill="#fff8e7" opacity="0.44"/>
+<circle cx="1000.2" cy="998.4" r="2.7" fill="#f1c86c" opacity="0.20"/>
+<circle cx="965.2" cy="27.3" r="4.1" fill="#fff8e7" opacity="0.58"/>
+<circle cx="1600.0" cy="178.5" r="3.6" fill="#f1c86c" opacity="0.28"/>
+<circle cx="1304.2" cy="431.0" r="3.5" fill="#fff8e7" opacity="0.34"/>
+<circle cx="1179.4" cy="1047.9" r="6.1" fill="#f1c86c" opacity="0.58"/>
+<circle cx="503.9" cy="822.9" r="8.9" fill="#fff8e7" opacity="0.31"/>
+<circle cx="705.7" cy="466.9" r="4.9" fill="#f1c86c" opacity="0.22"/>
+<circle cx="1528.1" cy="856.1" r="4.7" fill="#fff8e7" opacity="0.15"/>
+<circle cx="661.8" cy="510.8" r="12.2" fill="#f1c86c" opacity="0.27"/>
+<circle cx="121.2" cy="687.7" r="4.8" fill="#fff8e7" opacity="0.41"/>
+<circle cx="1355.1" cy="455.1" r="2.3" fill="#f1c86c" opacity="0.59"/>
+<circle cx="808.0" cy="1163.6" r="4.1" fill="#fff8e7" opacity="0.16"/>
+<circle cx="1374.9" cy="218.5" r="12.8" fill="#f1c86c" opacity="0.12"/>
+<circle cx="901.8" cy="1094.7" r="2.9" fill="#fff8e7" opacity="0.32"/>
+<circle cx="917.1" cy="221.7" r="8.3" fill="#f1c86c" opacity="0.29"/>
+<circle cx="1193.0" cy="958.5" r="5.3" fill="#fff8e7" opacity="0.58"/>
+<circle cx="200.4" cy="194.1" r="8.8" fill="#f1c86c" opacity="0.29"/>
+<circle cx="1095.4" cy="1199.4" r="2.2" fill="#fff8e7" opacity="0.17"/>
+<circle cx="1447.0" cy="302.9" r="10.8" fill="#f1c86c" opacity="0.12"/>
+<circle cx="944.0" cy="435.2" r="7.4" fill="#fff8e7" opacity="0.36"/>
+  <rect x="96" y="84.00000000000001" width="1408" height="1032" rx="86" stroke="#f1c86c" stroke-opacity="0.28" stroke-width="2"/>
+  <rect width="1600" height="1200" fill="#fff" opacity="0.03" filter="url(#softNoise)"/>
+  <g opacity="0.92">
+    <text x="128" y="983.9999999999999" fill="#fff8e7" font-family="Cormorant Garamond, Georgia, serif" font-size="82" font-weight="600" letter-spacing="-1">Champagne Current</text>
+    <text x="128" y="1050" fill="#f1c86c" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="600" letter-spacing="4">GILDED TRANSLUCENT COASTER SET</text>
+  </g>
+</svg>

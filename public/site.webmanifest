@@ -1,0 +1,16 @@
+{
+  "name": "Elysian Resin Atelier",
+  "short_name": "Elysian Resin",
+  "description": "Luxury handcrafted resin artwork and bespoke interior objects.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070606",
+  "theme_color": "#070606",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

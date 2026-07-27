@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Lumen River</title>
+  <desc id="desc">sculptural console river pour</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#060707"/>
+      <stop offset="0.42" stop-color="#16191b"/>
+      <stop offset="1" stop-color="#060707"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="58%">
+      <stop offset="0" stop-color="#8fd0c8" stop-opacity="0.88"/>
+      <stop offset="0.42" stop-color="#8fd0c8" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#060707" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.09"/>
+      </feComponentTransfer>
+      <feBlend mode="soft-light" in2="SourceGraphic"/>
+    </filter>
+    <filter id="blurred">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#glow)" opacity="0.9"/>
+  <ellipse cx="896.0" cy="576.0" rx="544.0" ry="264.0" fill="#8fd0c8" opacity="0.18" filter="url(#blurred)"/>
+  <path d="M -120 252.8 C 318.0 92.8, 791.9 442.8, 1376.2 252.8 S 1780.0 132.8, 1860.0 252.8" fill="none" stroke="#bd8f4a" stroke-width="31.6" stroke-linecap="round" opacity="0.30"/>
+<path d="M -120 347.1 C 380.1 187.1, 942.2 537.1, 1369.4 347.1 S 1780.0 227.1, 1860.0 347.1" fill="none" stroke="#8fd0c8" stroke-width="19.4" stroke-linecap="round" opacity="0.16"/>
+<path d="M -120 474.8 C 512.9 314.8, 1007.7 664.8, 1249.4 474.8 S 1780.0 354.8, 1860.0 474.8" fill="none" stroke="#fff6df" stroke-width="24.1" stroke-linecap="round" opacity="0.33"/>
+<path d="M -120 562.7 C 420.3 402.7, 911.4 752.7, 1300.1 562.7 S 1780.0 442.7, 1860.0 562.7" fill="none" stroke="#bd8f4a" stroke-width="41.9" stroke-linecap="round" opacity="0.18"/>
+<path d="M -120 663.4 C 559.9 503.4, 886.9 853.4, 1406.7 663.4 S 1780.0 543.4, 1860.0 663.4" fill="none" stroke="#8fd0c8" stroke-width="24.8" stroke-linecap="round" opacity="0.33"/>
+<path d="M -120 767.8 C 327.2 607.8, 894.4 957.8, 1300.5 767.8 S 1780.0 647.8, 1860.0 767.8" fill="none" stroke="#fff6df" stroke-width="22.1" stroke-linecap="round" opacity="0.16"/>
+<path d="M -120 900.4 C 383.0 740.4, 932.2 1090.4, 1308.4 900.4 S 1780.0 780.4, 1860.0 900.4" fill="none" stroke="#bd8f4a" stroke-width="11.4" stroke-linecap="round" opacity="0.33"/>
+<path d="M -120 984.8 C 474.9 824.8, 1021.4 1174.8, 1398.2 984.8 S 1780.0 864.8, 1860.0 984.8" fill="none" stroke="#8fd0c8" stroke-width="26.8" stroke-linecap="round" opacity="0.29"/>
+  <circle cx="1201.7" cy="551.7" r="10.1" fill="#bd8f4a" opacity="0.24"/>
+<circle cx="1046.3" cy="944.0" r="5.8" fill="#fff6df" opacity="0.15"/>
+<circle cx="1360.0" cy="259.3" r="4.3" fill="#bd8f4a" opacity="0.21"/>
+<circle cx="1365.3" cy="391.1" r="2.3" fill="#fff6df" opacity="0.23"/>
+<circle cx="1545.1" cy="1178.0" r="4.2" fill="#bd8f4a" opacity="0.52"/>
+<circle cx="996.6" cy="292.9" r="9.0" fill="#fff6df" opacity="0.47"/>
+<circle cx="1402.2" cy="165.2" r="11.6" fill="#bd8f4a" opacity="0.42"/>
+<circle cx="816.2" cy="178.9" r="3.7" fill="#fff6df" opacity="0.46"/>
+<circle cx="896.7" cy="90.9" r="4.1" fill="#bd8f4a" opacity="0.54"/>
+<circle cx="309.1" cy="343.2" r="9.2" fill="#fff6df" opacity="0.53"/>
+<circle cx="1253.8" cy="243.1" r="10.6" fill="#bd8f4a" opacity="0.27"/>
+<circle cx="156.1" cy="775.2" r="12.4" fill="#fff6df" opacity="0.13"/>
+<circle cx="1044.4" cy="973.2" r="7.8" fill="#bd8f4a" opacity="0.15"/>
+<circle cx="1124.2" cy="203.1" r="8.4" fill="#fff6df" opacity="0.50"/>
+<circle cx="234.0" cy="169.5" r="7.0" fill="#bd8f4a" opacity="0.24"/>
+<circle cx="541.7" cy="139.7" r="5.1" fill="#fff6df" opacity="0.34"/>
+<circle cx="1281.1" cy="1019.7" r="11.3" fill="#bd8f4a" opacity="0.26"/>
+<circle cx="612.0" cy="816.8" r="8.7" fill="#fff6df" opacity="0.50"/>
+<circle cx="163.5" cy="686.0" r="11.0" fill="#bd8f4a" opacity="0.50"/>
+<circle cx="1270.8" cy="570.8" r="8.8" fill="#fff6df" opacity="0.20"/>
+<circle cx="1592.8" cy="102.8" r="6.6" fill="#bd8f4a" opacity="0.36"/>
+<circle cx="687.0" cy="87.8" r="10.4" fill="#fff6df" opacity="0.36"/>
+<circle cx="339.3" cy="892.9" r="7.3" fill="#bd8f4a" opacity="0.36"/>
+<circle cx="1306.7" cy="637.2" r="2.7" fill="#fff6df" opacity="0.42"/>
+<circle cx="1228.3" cy="522.1" r="7.4" fill="#bd8f4a" opacity="0.47"/>
+<circle cx="766.8" cy="998.6" r="7.0" fill="#fff6df" opacity="0.46"/>
+<circle cx="1380.6" cy="924.8" r="9.9" fill="#bd8f4a" opacity="0.22"/>
+<circle cx="1143.7" cy="79.4" r="7.5" fill="#fff6df" opacity="0.18"/>
+<circle cx="1189.9" cy="962.3" r="5.3" fill="#bd8f4a" opacity="0.41"/>
+<circle cx="330.8" cy="1143.9" r="5.3" fill="#fff6df" opacity="0.16"/>
+<circle cx="238.3" cy="1095.2" r="2.5" fill="#bd8f4a" opacity="0.23"/>
+<circle cx="1003.2" cy="434.7" r="5.2" fill="#fff6df" opacity="0.50"/>
+<circle cx="1262.2" cy="1004.1" r="3.6" fill="#bd8f4a" opacity="0.15"/>
+<circle cx="142.6" cy="98.5" r="12.8" fill="#fff6df" opacity="0.51"/>
+  <rect x="96" y="84.00000000000001" width="1408" height="1032" rx="86" stroke="#bd8f4a" stroke-opacity="0.28" stroke-width="2"/>
+  <rect width="1600" height="1200" fill="#fff" opacity="0.03" filter="url(#softNoise)"/>
+  <g opacity="0.92">
+    <text x="128" y="983.9999999999999" fill="#fff6df" font-family="Cormorant Garamond, Georgia, serif" font-size="82" font-weight="600" letter-spacing="-1">Lumen River</text>
+    <text x="128" y="1050" fill="#bd8f4a" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="600" letter-spacing="4">SCULPTURAL CONSOLE RIVER POUR</text>
+  </g>
+</svg>

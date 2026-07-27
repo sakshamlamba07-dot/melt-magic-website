@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Pearl Inlay</title>
+  <desc id="desc">atelier process study</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#060606"/>
+      <stop offset="0.42" stop-color="#17110e"/>
+      <stop offset="1" stop-color="#060606"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="58%">
+      <stop offset="0" stop-color="#85d6df" stop-opacity="0.88"/>
+      <stop offset="0.42" stop-color="#85d6df" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#060606" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.09"/>
+      </feComponentTransfer>
+      <feBlend mode="soft-light" in2="SourceGraphic"/>
+    </filter>
+    <filter id="blurred">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#glow)" opacity="0.9"/>
+  <ellipse cx="896.0" cy="576.0" rx="544.0" ry="264.0" fill="#85d6df" opacity="0.18" filter="url(#blurred)"/>
+  <path d="M -120 221.8 C 361.4 61.8, 1039.3 411.8, 1368.9 221.8 S 1780.0 101.8, 1860.0 221.8" fill="none" stroke="#c99a55" stroke-width="30.9" stroke-linecap="round" opacity="0.25"/>
+<path d="M -120 361.2 C 535.7 201.2, 936.2 551.2, 1291.3 361.2 S 1780.0 241.2, 1860.0 361.2" fill="none" stroke="#85d6df" stroke-width="40.4" stroke-linecap="round" opacity="0.29"/>
+<path d="M -120 453.2 C 364.6 293.2, 1023.3 643.2, 1399.0 453.2 S 1780.0 333.2, 1860.0 453.2" fill="none" stroke="#fff8ea" stroke-width="40.7" stroke-linecap="round" opacity="0.44"/>
+<path d="M -120 580.4 C 553.0 420.4, 896.7 770.4, 1366.7 580.4 S 1780.0 460.4, 1860.0 580.4" fill="none" stroke="#c99a55" stroke-width="11.4" stroke-linecap="round" opacity="0.33"/>
+<path d="M -120 652.1 C 494.0 492.1, 828.9 842.1, 1341.8 652.1 S 1780.0 532.1, 1860.0 652.1" fill="none" stroke="#85d6df" stroke-width="39.0" stroke-linecap="round" opacity="0.39"/>
+<path d="M -120 772.2 C 380.3 612.2, 810.1 962.2, 1253.6 772.2 S 1780.0 652.2, 1860.0 772.2" fill="none" stroke="#fff8ea" stroke-width="30.7" stroke-linecap="round" opacity="0.22"/>
+<path d="M -120 888.0 C 312.0 728.0, 1031.9 1078.0, 1374.9 888.0 S 1780.0 768.0, 1860.0 888.0" fill="none" stroke="#c99a55" stroke-width="18.5" stroke-linecap="round" opacity="0.44"/>
+<path d="M -120 981.5 C 510.3 821.5, 964.5 1171.5, 1351.8 981.5 S 1780.0 861.5, 1860.0 981.5" fill="none" stroke="#85d6df" stroke-width="14.3" stroke-linecap="round" opacity="0.38"/>
+  <circle cx="563.0" cy="797.6" r="8.1" fill="#c99a55" opacity="0.34"/>
+<circle cx="703.5" cy="116.5" r="11.4" fill="#fff8ea" opacity="0.26"/>
+<circle cx="333.4" cy="742.9" r="6.7" fill="#c99a55" opacity="0.47"/>
+<circle cx="407.0" cy="438.8" r="11.4" fill="#fff8ea" opacity="0.51"/>
+<circle cx="827.1" cy="307.8" r="3.8" fill="#c99a55" opacity="0.26"/>
+<circle cx="1588.2" cy="787.6" r="8.9" fill="#fff8ea" opacity="0.22"/>
+<circle cx="102.4" cy="1089.5" r="5.0" fill="#c99a55" opacity="0.33"/>
+<circle cx="435.4" cy="905.7" r="10.8" fill="#fff8ea" opacity="0.12"/>
+<circle cx="541.9" cy="1117.3" r="2.2" fill="#c99a55" opacity="0.12"/>
+<circle cx="100.3" cy="303.0" r="12.2" fill="#fff8ea" opacity="0.35"/>
+<circle cx="774.6" cy="113.6" r="3.1" fill="#c99a55" opacity="0.47"/>
+<circle cx="37.6" cy="140.2" r="2.5" fill="#fff8ea" opacity="0.52"/>
+<circle cx="845.8" cy="820.6" r="7.9" fill="#c99a55" opacity="0.29"/>
+<circle cx="1264.0" cy="1136.2" r="6.6" fill="#fff8ea" opacity="0.26"/>
+<circle cx="51.4" cy="453.4" r="3.9" fill="#c99a55" opacity="0.35"/>
+<circle cx="1302.6" cy="1087.9" r="8.9" fill="#fff8ea" opacity="0.34"/>
+<circle cx="1394.1" cy="397.5" r="2.6" fill="#c99a55" opacity="0.51"/>
+<circle cx="68.4" cy="1032.4" r="8.8" fill="#fff8ea" opacity="0.58"/>
+<circle cx="246.2" cy="812.6" r="5.5" fill="#c99a55" opacity="0.29"/>
+<circle cx="898.4" cy="160.9" r="7.4" fill="#fff8ea" opacity="0.45"/>
+<circle cx="637.6" cy="451.5" r="3.1" fill="#c99a55" opacity="0.17"/>
+<circle cx="751.4" cy="634.6" r="12.5" fill="#fff8ea" opacity="0.26"/>
+<circle cx="1177.2" cy="314.2" r="7.5" fill="#c99a55" opacity="0.28"/>
+<circle cx="101.8" cy="634.6" r="11.9" fill="#fff8ea" opacity="0.54"/>
+<circle cx="964.3" cy="262.6" r="2.6" fill="#c99a55" opacity="0.47"/>
+<circle cx="530.9" cy="689.4" r="6.3" fill="#fff8ea" opacity="0.29"/>
+<circle cx="191.1" cy="849.8" r="3.5" fill="#c99a55" opacity="0.38"/>
+<circle cx="430.7" cy="926.1" r="12.4" fill="#fff8ea" opacity="0.50"/>
+<circle cx="946.6" cy="409.0" r="8.0" fill="#c99a55" opacity="0.16"/>
+<circle cx="478.8" cy="798.9" r="10.1" fill="#fff8ea" opacity="0.31"/>
+<circle cx="235.8" cy="432.7" r="9.9" fill="#c99a55" opacity="0.24"/>
+<circle cx="795.2" cy="102.0" r="4.4" fill="#fff8ea" opacity="0.13"/>
+<circle cx="1179.2" cy="196.6" r="5.8" fill="#c99a55" opacity="0.28"/>
+<circle cx="1174.7" cy="581.0" r="2.8" fill="#fff8ea" opacity="0.50"/>
+  <rect x="96" y="84.00000000000001" width="1408" height="1032" rx="86" stroke="#c99a55" stroke-opacity="0.28" stroke-width="2"/>
+  <rect width="1600" height="1200" fill="#fff" opacity="0.03" filter="url(#softNoise)"/>
+  <g opacity="0.92">
+    <text x="128" y="983.9999999999999" fill="#fff8ea" font-family="Cormorant Garamond, Georgia, serif" font-size="82" font-weight="600" letter-spacing="-1">Pearl Inlay</text>
+    <text x="128" y="1050" fill="#c99a55" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="600" letter-spacing="4">ATELIER PROCESS STUDY</text>
+  </g>
+</svg>

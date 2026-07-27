@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Nocturne Marble</title>
+  <desc id="desc">smoked black polished tray</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#050506"/>
+      <stop offset="0.42" stop-color="#111317"/>
+      <stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="58%">
+      <stop offset="0" stop-color="#6c7280" stop-opacity="0.88"/>
+      <stop offset="0.42" stop-color="#6c7280" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#050506" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.09"/>
+      </feComponentTransfer>
+      <feBlend mode="soft-light" in2="SourceGraphic"/>
+    </filter>
+    <filter id="blurred">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#glow)" opacity="0.9"/>
+  <ellipse cx="896.0" cy="576.0" rx="544.0" ry="264.0" fill="#6c7280" opacity="0.18" filter="url(#blurred)"/>
+  <path d="M -120 222.4 C 273.3 62.4, 832.5 412.4, 1365.4 222.4 S 1780.0 102.4, 1860.0 222.4" fill="none" stroke="#c39a57" stroke-width="30.0" stroke-linecap="round" opacity="0.40"/>
+<path d="M -120 326.0 C 273.3 166.0, 926.9 516.0, 1291.1 326.0 S 1780.0 206.0, 1860.0 326.0" fill="none" stroke="#6c7280" stroke-width="10.1" stroke-linecap="round" opacity="0.16"/>
+<path d="M -120 474.5 C 443.6 314.5, 870.2 664.5, 1384.8 474.5 S 1780.0 354.5, 1860.0 474.5" fill="none" stroke="#fff3da" stroke-width="43.3" stroke-linecap="round" opacity="0.26"/>
+<path d="M -120 568.4 C 536.8 408.4, 817.0 758.4, 1272.8 568.4 S 1780.0 448.4, 1860.0 568.4" fill="none" stroke="#c39a57" stroke-width="34.4" stroke-linecap="round" opacity="0.38"/>
+<path d="M -120 656.1 C 324.8 496.1, 782.5 846.1, 1323.0 656.1 S 1780.0 536.1, 1860.0 656.1" fill="none" stroke="#6c7280" stroke-width="19.4" stroke-linecap="round" opacity="0.28"/>
+<path d="M -120 782.3 C 324.6 622.3, 840.6 972.3, 1282.6 782.3 S 1780.0 662.3, 1860.0 782.3" fill="none" stroke="#fff3da" stroke-width="13.8" stroke-linecap="round" opacity="0.24"/>
+<path d="M -120 889.5 C 559.5 729.5, 961.4 1079.5, 1404.8 889.5 S 1780.0 769.5, 1860.0 889.5" fill="none" stroke="#c39a57" stroke-width="36.0" stroke-linecap="round" opacity="0.20"/>
+<path d="M -120 996.9 C 481.6 836.9, 929.9 1186.9, 1301.8 996.9 S 1780.0 876.9, 1860.0 996.9" fill="none" stroke="#6c7280" stroke-width="27.2" stroke-linecap="round" opacity="0.39"/>
+  <circle cx="754.4" cy="459.2" r="4.8" fill="#c39a57" opacity="0.24"/>
+<circle cx="609.8" cy="1033.2" r="2.7" fill="#fff3da" opacity="0.31"/>
+<circle cx="330.3" cy="1011.7" r="12.2" fill="#c39a57" opacity="0.52"/>
+<circle cx="649.4" cy="468.0" r="11.5" fill="#fff3da" opacity="0.42"/>
+<circle cx="559.1" cy="515.0" r="7.1" fill="#c39a57" opacity="0.56"/>
+<circle cx="244.3" cy="577.6" r="4.7" fill="#fff3da" opacity="0.25"/>
+<circle cx="71.6" cy="33.9" r="9.8" fill="#c39a57" opacity="0.17"/>
+<circle cx="386.3" cy="279.4" r="3.0" fill="#fff3da" opacity="0.33"/>
+<circle cx="1137.4" cy="1056.7" r="12.0" fill="#c39a57" opacity="0.40"/>
+<circle cx="918.3" cy="71.9" r="6.5" fill="#fff3da" opacity="0.53"/>
+<circle cx="36.0" cy="661.1" r="5.0" fill="#c39a57" opacity="0.12"/>
+<circle cx="201.1" cy="1094.7" r="2.5" fill="#fff3da" opacity="0.31"/>
+<circle cx="324.8" cy="410.0" r="7.2" fill="#c39a57" opacity="0.12"/>
+<circle cx="717.6" cy="648.7" r="5.2" fill="#fff3da" opacity="0.12"/>
+<circle cx="1567.9" cy="67.0" r="5.4" fill="#c39a57" opacity="0.34"/>
+<circle cx="638.6" cy="506.0" r="6.6" fill="#fff3da" opacity="0.28"/>
+<circle cx="1291.7" cy="250.6" r="4.0" fill="#c39a57" opacity="0.40"/>
+<circle cx="1132.7" cy="694.2" r="6.0" fill="#fff3da" opacity="0.38"/>
+<circle cx="807.6" cy="7.7" r="5.8" fill="#c39a57" opacity="0.16"/>
+<circle cx="1596.3" cy="202.8" r="7.1" fill="#fff3da" opacity="0.27"/>
+<circle cx="644.3" cy="1149.0" r="7.8" fill="#c39a57" opacity="0.38"/>
+<circle cx="941.8" cy="1094.0" r="11.6" fill="#fff3da" opacity="0.25"/>
+<circle cx="449.3" cy="438.0" r="3.3" fill="#c39a57" opacity="0.51"/>
+<circle cx="375.2" cy="946.5" r="2.6" fill="#fff3da" opacity="0.47"/>
+<circle cx="1370.9" cy="1123.8" r="5.1" fill="#c39a57" opacity="0.49"/>
+<circle cx="721.2" cy="921.8" r="2.3" fill="#fff3da" opacity="0.51"/>
+<circle cx="349.2" cy="270.1" r="2.2" fill="#c39a57" opacity="0.53"/>
+<circle cx="1509.0" cy="1197.7" r="3.5" fill="#fff3da" opacity="0.32"/>
+<circle cx="1146.7" cy="852.7" r="9.9" fill="#c39a57" opacity="0.17"/>
+<circle cx="222.2" cy="269.3" r="3.3" fill="#fff3da" opacity="0.43"/>
+<circle cx="611.3" cy="670.6" r="6.8" fill="#c39a57" opacity="0.24"/>
+<circle cx="441.6" cy="372.0" r="12.8" fill="#fff3da" opacity="0.48"/>
+<circle cx="616.8" cy="794.4" r="10.3" fill="#c39a57" opacity="0.45"/>
+<circle cx="1498.7" cy="31.6" r="5.5" fill="#fff3da" opacity="0.33"/>
+  <rect x="96" y="84.00000000000001" width="1408" height="1032" rx="86" stroke="#c39a57" stroke-opacity="0.28" stroke-width="2"/>
+  <rect width="1600" height="1200" fill="#fff" opacity="0.03" filter="url(#softNoise)"/>
+  <g opacity="0.92">
+    <text x="128" y="983.9999999999999" fill="#fff3da" font-family="Cormorant Garamond, Georgia, serif" font-size="82" font-weight="600" letter-spacing="-1">Nocturne Marble</text>
+    <text x="128" y="1050" fill="#c39a57" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="600" letter-spacing="4">SMOKED BLACK POLISHED TRAY</text>
+  </g>
+</svg>

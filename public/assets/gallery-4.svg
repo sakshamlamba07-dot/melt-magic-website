@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">River Edge</title>
+  <desc id="desc">atelier process study</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#060606"/>
+      <stop offset="0.42" stop-color="#17110e"/>
+      <stop offset="1" stop-color="#060606"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="58%">
+      <stop offset="0" stop-color="#ead7a7" stop-opacity="0.88"/>
+      <stop offset="0.42" stop-color="#ead7a7" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#060606" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.09"/>
+      </feComponentTransfer>
+      <feBlend mode="soft-light" in2="SourceGraphic"/>
+    </filter>
+    <filter id="blurred">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#glow)" opacity="0.9"/>
+  <ellipse cx="896.0" cy="576.0" rx="544.0" ry="264.0" fill="#ead7a7" opacity="0.18" filter="url(#blurred)"/>
+  <path d="M -120 259.7 C 548.6 99.7, 978.7 449.7, 1284.7 259.7 S 1780.0 139.7, 1860.0 259.7" fill="none" stroke="#c99a55" stroke-width="24.9" stroke-linecap="round" opacity="0.17"/>
+<path d="M -120 361.8 C 419.0 201.8, 823.7 551.8, 1256.8 361.8 S 1780.0 241.8, 1860.0 361.8" fill="none" stroke="#ead7a7" stroke-width="42.7" stroke-linecap="round" opacity="0.34"/>
+<path d="M -120 466.1 C 422.0 306.1, 927.2 656.1, 1395.6 466.1 S 1780.0 346.1, 1860.0 466.1" fill="none" stroke="#fff8ea" stroke-width="24.0" stroke-linecap="round" opacity="0.42"/>
+<path d="M -120 556.6 C 439.5 396.6, 961.1 746.6, 1249.2 556.6 S 1780.0 436.6, 1860.0 556.6" fill="none" stroke="#c99a55" stroke-width="32.4" stroke-linecap="round" opacity="0.21"/>
+<path d="M -120 675.1 C 481.9 515.1, 1055.3 865.1, 1277.4 675.1 S 1780.0 555.1, 1860.0 675.1" fill="none" stroke="#ead7a7" stroke-width="31.6" stroke-linecap="round" opacity="0.43"/>
+<path d="M -120 775.8 C 337.3 615.8, 1004.4 965.8, 1342.9 775.8 S 1780.0 655.8, 1860.0 775.8" fill="none" stroke="#fff8ea" stroke-width="37.0" stroke-linecap="round" opacity="0.41"/>
+<path d="M -120 897.4 C 304.3 737.4, 796.5 1087.4, 1316.5 897.4 S 1780.0 777.4, 1860.0 897.4" fill="none" stroke="#c99a55" stroke-width="16.6" stroke-linecap="round" opacity="0.20"/>
+<path d="M -120 998.5 C 495.8 838.5, 927.6 1188.5, 1285.6 998.5 S 1780.0 878.5, 1860.0 998.5" fill="none" stroke="#ead7a7" stroke-width="13.7" stroke-linecap="round" opacity="0.43"/>
+  <circle cx="934.9" cy="1158.8" r="10.1" fill="#c99a55" opacity="0.17"/>
+<circle cx="247.9" cy="78.8" r="11.1" fill="#fff8ea" opacity="0.13"/>
+<circle cx="427.6" cy="124.2" r="2.8" fill="#c99a55" opacity="0.32"/>
+<circle cx="20.4" cy="1038.4" r="10.3" fill="#fff8ea" opacity="0.59"/>
+<circle cx="1155.4" cy="415.7" r="7.6" fill="#c99a55" opacity="0.37"/>
+<circle cx="1528.8" cy="101.5" r="6.9" fill="#fff8ea" opacity="0.27"/>
+<circle cx="818.4" cy="834.1" r="6.3" fill="#c99a55" opacity="0.46"/>
+<circle cx="1210.3" cy="352.5" r="5.5" fill="#fff8ea" opacity="0.40"/>
+<circle cx="1416.5" cy="527.2" r="9.2" fill="#c99a55" opacity="0.18"/>
+<circle cx="303.9" cy="1.1" r="3.6" fill="#fff8ea" opacity="0.40"/>
+<circle cx="509.4" cy="1008.7" r="4.7" fill="#c99a55" opacity="0.58"/>
+<circle cx="1435.0" cy="211.4" r="12.5" fill="#fff8ea" opacity="0.29"/>
+<circle cx="796.6" cy="252.2" r="2.5" fill="#c99a55" opacity="0.19"/>
+<circle cx="533.9" cy="655.4" r="5.2" fill="#fff8ea" opacity="0.42"/>
+<circle cx="1137.5" cy="1182.6" r="4.3" fill="#c99a55" opacity="0.55"/>
+<circle cx="382.1" cy="20.3" r="7.0" fill="#fff8ea" opacity="0.16"/>
+<circle cx="596.3" cy="961.0" r="3.1" fill="#c99a55" opacity="0.58"/>
+<circle cx="507.3" cy="557.5" r="7.6" fill="#fff8ea" opacity="0.33"/>
+<circle cx="770.0" cy="589.1" r="4.0" fill="#c99a55" opacity="0.21"/>
+<circle cx="743.4" cy="67.1" r="3.6" fill="#fff8ea" opacity="0.33"/>
+<circle cx="1254.6" cy="1015.1" r="7.3" fill="#c99a55" opacity="0.43"/>
+<circle cx="1223.0" cy="427.6" r="4.7" fill="#fff8ea" opacity="0.36"/>
+<circle cx="1167.3" cy="934.3" r="8.3" fill="#c99a55" opacity="0.57"/>
+<circle cx="58.7" cy="1142.8" r="12.1" fill="#fff8ea" opacity="0.21"/>
+<circle cx="1023.3" cy="1133.1" r="9.2" fill="#c99a55" opacity="0.44"/>
+<circle cx="443.9" cy="1151.8" r="5.8" fill="#fff8ea" opacity="0.13"/>
+<circle cx="1429.0" cy="419.6" r="9.7" fill="#c99a55" opacity="0.43"/>
+<circle cx="694.3" cy="278.2" r="5.1" fill="#fff8ea" opacity="0.55"/>
+<circle cx="182.7" cy="55.0" r="6.3" fill="#c99a55" opacity="0.46"/>
+<circle cx="261.5" cy="434.8" r="6.4" fill="#fff8ea" opacity="0.52"/>
+<circle cx="1453.6" cy="261.5" r="11.9" fill="#c99a55" opacity="0.52"/>
+<circle cx="33.2" cy="62.0" r="7.8" fill="#fff8ea" opacity="0.53"/>
+<circle cx="101.6" cy="182.1" r="11.1" fill="#c99a55" opacity="0.24"/>
+<circle cx="1499.5" cy="540.3" r="4.7" fill="#fff8ea" opacity="0.52"/>
+  <rect x="96" y="84.00000000000001" width="1408" height="1032" rx="86" stroke="#c99a55" stroke-opacity="0.28" stroke-width="2"/>
+  <rect width="1600" height="1200" fill="#fff" opacity="0.03" filter="url(#softNoise)"/>
+  <g opacity="0.92">
+    <text x="128" y="983.9999999999999" fill="#fff8ea" font-family="Cormorant Garamond, Georgia, serif" font-size="82" font-weight="600" letter-spacing="-1">River Edge</text>
+    <text x="128" y="1050" fill="#c99a55" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="600" letter-spacing="4">ATELIER PROCESS STUDY</text>
+  </g>
+</svg>

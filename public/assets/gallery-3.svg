@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Studio Light</title>
+  <desc id="desc">atelier process study</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#060606"/>
+      <stop offset="0.42" stop-color="#17110e"/>
+      <stop offset="1" stop-color="#060606"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="58%">
+      <stop offset="0" stop-color="#85d6df" stop-opacity="0.88"/>
+      <stop offset="0.42" stop-color="#85d6df" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#060606" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.09"/>
+      </feComponentTransfer>
+      <feBlend mode="soft-light" in2="SourceGraphic"/>
+    </filter>
+    <filter id="blurred">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+  <rect width="1600" height="1200" fill="url(#glow)" opacity="0.9"/>
+  <ellipse cx="896.0" cy="576.0" rx="544.0" ry="264.0" fill="#85d6df" opacity="0.18" filter="url(#blurred)"/>
+  <path d="M -120 228.6 C 544.6 68.6, 806.4 418.6, 1389.4 228.6 S 1780.0 108.6, 1860.0 228.6" fill="none" stroke="#c99a55" stroke-width="21.0" stroke-linecap="round" opacity="0.22"/>
+<path d="M -120 344.9 C 279.7 184.9, 981.6 534.9, 1271.7 344.9 S 1780.0 224.9, 1860.0 344.9" fill="none" stroke="#85d6df" stroke-width="11.6" stroke-linecap="round" opacity="0.18"/>
+<path d="M -120 441.9 C 422.1 281.9, 874.5 631.9, 1257.3 441.9 S 1780.0 321.9, 1860.0 441.9" fill="none" stroke="#fff8ea" stroke-width="24.0" stroke-linecap="round" opacity="0.34"/>
+<path d="M -120 574.6 C 443.4 414.6, 1014.0 764.6, 1348.2 574.6 S 1780.0 454.6, 1860.0 574.6" fill="none" stroke="#c99a55" stroke-width="27.9" stroke-linecap="round" opacity="0.33"/>
+<path d="M -120 666.9 C 321.8 506.9, 802.8 856.9, 1399.4 666.9 S 1780.0 546.9, 1860.0 666.9" fill="none" stroke="#85d6df" stroke-width="11.5" stroke-linecap="round" opacity="0.39"/>
+<path d="M -120 776.9 C 412.4 616.9, 811.8 966.9, 1368.9 776.9 S 1780.0 656.9, 1860.0 776.9" fill="none" stroke="#fff8ea" stroke-width="29.8" stroke-linecap="round" opacity="0.18"/>
+<path d="M -120 875.8 C 290.8 715.8, 1010.8 1065.8, 1355.0 875.8 S 1780.0 755.8, 1860.0 875.8" fill="none" stroke="#c99a55" stroke-width="40.8" stroke-linecap="round" opacity="0.34"/>
+<path d="M -120 983.1 C 322.4 823.1, 867.7 1173.1, 1285.6 983.1 S 1780.0 863.1, 1860.0 983.1" fill="none" stroke="#85d6df" stroke-width="16.3" stroke-linecap="round" opacity="0.21"/>
+  <circle cx="787.6" cy="1059.0" r="10.7" fill="#c99a55" opacity="0.25"/>
+<circle cx="661.8" cy="510.1" r="7.5" fill="#fff8ea" opacity="0.34"/>
+<circle cx="44.5" cy="311.1" r="6.4" fill="#c99a55" opacity="0.46"/>
+<circle cx="743.2" cy="557.0" r="10.6" fill="#fff8ea" opacity="0.39"/>
+<circle cx="758.9" cy="868.7" r="3.4" fill="#c99a55" opacity="0.18"/>
+<circle cx="552.6" cy="154.2" r="9.0" fill="#fff8ea" opacity="0.32"/>
+<circle cx="625.5" cy="751.5" r="6.8" fill="#c99a55" opacity="0.35"/>
+<circle cx="1524.9" cy="836.4" r="11.4" fill="#fff8ea" opacity="0.19"/>
+<circle cx="915.3" cy="1156.3" r="2.9" fill="#c99a55" opacity="0.34"/>
+<circle cx="148.5" cy="861.4" r="7.2" fill="#fff8ea" opacity="0.56"/>
+<circle cx="652.1" cy="985.9" r="10.9" fill="#c99a55" opacity="0.59"/>
+<circle cx="1378.7" cy="292.7" r="6.2" fill="#fff8ea" opacity="0.58"/>
+<circle cx="1297.7" cy="665.7" r="12.6" fill="#c99a55" opacity="0.36"/>
+<circle cx="776.2" cy="590.1" r="10.9" fill="#fff8ea" opacity="0.57"/>
+<circle cx="165.0" cy="848.9" r="11.3" fill="#c99a55" opacity="0.18"/>
+<circle cx="65.8" cy="942.9" r="10.9" fill="#fff8ea" opacity="0.47"/>
+<circle cx="141.1" cy="889.7" r="11.7" fill="#c99a55" opacity="0.42"/>
+<circle cx="1100.0" cy="484.6" r="10.5" fill="#fff8ea" opacity="0.13"/>
+<circle cx="1119.2" cy="685.9" r="4.8" fill="#c99a55" opacity="0.28"/>
+<circle cx="311.1" cy="20.4" r="6.7" fill="#fff8ea" opacity="0.18"/>
+<circle cx="1526.5" cy="826.3" r="7.0" fill="#c99a55" opacity="0.56"/>
+<circle cx="628.9" cy="764.3" r="8.0" fill="#fff8ea" opacity="0.36"/>
+<circle cx="932.6" cy="173.0" r="9.6" fill="#c99a55" opacity="0.59"/>
+<circle cx="999.0" cy="841.3" r="12.6" fill="#fff8ea" opacity="0.39"/>
+<circle cx="8.7" cy="1063.3" r="7.9" fill="#c99a55" opacity="0.22"/>
+<circle cx="1044.0" cy="1062.4" r="3.5" fill="#fff8ea" opacity="0.39"/>
+<circle cx="212.8" cy="142.2" r="3.0" fill="#c99a55" opacity="0.21"/>
+<circle cx="72.7" cy="458.2" r="3.2" fill="#fff8ea" opacity="0.28"/>
+<circle cx="1224.8" cy="925.6" r="12.5" fill="#c99a55" opacity="0.16"/>
+<circle cx="365.7" cy="1005.4" r="6.9" fill="#fff8ea" opacity="0.28"/>
+<circle cx="763.3" cy="356.8" r="2.3" fill="#c99a55" opacity="0.50"/>
+<circle cx="704.2" cy="479.2" r="10.4" fill="#fff8ea" opacity="0.12"/>
+<circle cx="725.4" cy="925.8" r="3.9" fill="#c99a55" opacity="0.39"/>
+<circle cx="286.7" cy="1042.3" r="11.4" fill="#fff8ea" opacity="0.40"/>
+  <rect x="96" y="84.00000000000001" width="1408" height="1032" rx="86" stroke="#c99a55" stroke-opacity="0.28" stroke-width="2"/>
+  <rect width="1600" height="1200" fill="#fff" opacity="0.03" filter="url(#softNoise)"/>
+  <g opacity="0.92">
+    <text x="128" y="983.9999999999999" fill="#fff8ea" font-family="Cormorant Garamond, Georgia, serif" font-size="82" font-weight="600" letter-spacing="-1">Studio Light</text>
+    <text x="128" y="1050" fill="#c99a55" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="600" letter-spacing="4">ATELIER PROCESS STUDY</text>
+  </g>
+</svg>
